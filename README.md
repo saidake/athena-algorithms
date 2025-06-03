@@ -1,5 +1,5 @@
-# Algorithm Athena
-Algorithm Athena is a collection of algorithm solutions.  
+# Athena Algorithms
+Athena Algorithms is a collection of algorithm solutions.  
 These algorithm solutions are licensed under CC-BY-SA 4.0.
 
 **Latest:** [57. Valid Palindrome](docs/algorithms/57-valid-palindrome.md) [Java, Python]
