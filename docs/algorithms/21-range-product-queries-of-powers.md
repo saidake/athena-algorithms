@@ -51,7 +51,7 @@ class Solution {
 }
 ```
 #### Complexity Analysis
-* Time Complexity: $O(bc^2)$
+* Time Complexity: $O(bc^2 + q)$
     * Integer.bitCount(n)
     
         Counts the number of set bits in the binary representation of integer `n`. This runs in $O(1)$ time.
@@ -70,11 +70,12 @@ class Solution {
 
         The `for` loop runs `queries.length` times, so the time complexity is $O(q)$ for `q` queries.
 
-     Since $O(q)$ grows slower than O(bc^2) and can be omitted, the total time complexity is $O(bc^2)$
+     `bc` is the number of set bits in `n` and is at most $32$, while `q` can be much larger.  
+     Therefore, the total time complexity is $O(bc^2 + q)$.
 
-* Space Complexity: $O(bc^2)$
+* Space Complexity: $O(bc^2 + q)$
     * `powers` array takes $O(bc)$ space.  
     * `productRes ` array takes $O(bc^2)$ space.  
     * `output ` array takes $O(q)$ space.
 
-    Because $O(q)$ grows slower than $O(bc^2)$ and can be omitted, the total space complexity is $O(bc^2)$.
+    Therefore, the total space complexity is $O(bc^2 + q)$.

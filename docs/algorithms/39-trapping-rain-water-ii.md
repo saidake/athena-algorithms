@@ -173,23 +173,23 @@ class Solution {
 }
 ```
 #### Complexity Analysis
-* Time Complexity: 
+* Time Complexity: $O(mn \log (mn))$
   * Initialize the `boundary` and `visited` array with the first and last columns.
     
-    Traversing the row indices of `heightMap` takes $O(m)$ time and the `offer` method of `PriorityQueue` takes $O(\log m\times n)$, 
-     resulting in a total time complexity of $O(m\log m\times n)$, where `m` is the row length and `n` is the column length.
+    Traversing the row indices of `heightMap` takes $O(m)$ time and the `offer` method of `PriorityQueue` takes $O(\log (mn))$, 
+     resulting in a total time complexity of $O(m\log (mn))$, where `m` is the row length and `n` is the column length.
 
   * Initialize the `boundary` and `visited` array with the first and last rows.
 
-    Similar to the previous step, this loop has a time complexity of $O(n \log m\times n)$.
+    Similar to the previous step, this loop has a time complexity of $O(n \log (mn))$.
 
   * Iterate over `boundary`
     
-    Since visited units are not traversed while reducing the boundary, the outer loop iterates over all units, taking $O(m\times n)$ time.  
-    The inner loop has a fixed `4` iterations, and the `offer` method of `PriorityQueue` takes $O(\log m \times n)$ time, 
-     resulting in a total time complexity of $O(m\times n \log m \times n)$.
+    Since visited units are not traversed while reducing the boundary, the outer loop iterates over all units, taking $O(mn)$ time.  
+    The inner loop has a fixed `4` iterations, and the `offer` method of `PriorityQueue` takes $O(\log (mn))$ time, 
+     resulting in a total time complexity of $O(mn \log (mn))$.
 
-  Therefore, the total time complexity is $O(m\times n \log m \times n)$.
+  Therefore, the total time complexity is $O(mn \log (mn))$.
 
 * Space Complexity: 
   * The priority queue `boundary` and array `visited` each take $O(m\times n)$ space.

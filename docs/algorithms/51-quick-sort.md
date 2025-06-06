@@ -73,7 +73,7 @@ public class QuickSort {
     At every level `D`, all `n` elements in `arr` are traversed for partitioning, despite being split into subarrays. This results in a time complexity of $O(n)$ per level.
   * In the worst case (e.g., when the pivot is always the smallest or largest element), the recursion tree degenerates into a linked list, leading to a time complexity of $O(n^2)$.  
   
-  Therefore, the average time complexity is $O(n\log n)$, and the worst-case is $O(n)$.  
+  Therefore, the average time complexity is $O(n\log n)$, and the worst-case is $O(n^2)$.  
   Since each partition step excludes the `pivot`, quick sort tends to outperform merge sort in practice.
 
 * Space Complexity: $O(\log n)$ (Averge Case), $O(n)$ (Worst Case) 

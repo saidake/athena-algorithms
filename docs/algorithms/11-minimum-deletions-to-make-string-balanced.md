@@ -23,7 +23,7 @@ f[i] =
 class Solution {
     public int minimumDeletions(String s) {
         int f = 0, countB = 0;
-        for (char c: s.charArray())
+        for (char c: s.toCharArray())
             if (c == 'b'){
                 ++countB; 
             } else {
@@ -37,4 +37,6 @@ class Solution {
 * Time Complexity: $O(n)$
 
     The `for` loop takes $O(n)$ time.
-* Space Complexity: $O(1)$
+* Space Complexity: $O(n)$
+
+    `s.toCharArray()` allocates a character array of length $n$, so the extra space is $O(n)$.

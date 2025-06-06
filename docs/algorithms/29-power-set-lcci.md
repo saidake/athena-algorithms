@@ -197,9 +197,9 @@ class Solution {
 #### Complexity Analysis
 * Time Complexity: $O(n\times2^n)$
 
-    The recursive call decreases by `1` each time. 
+    Each recursive call either includes or skips remaining elements, producing $\Theta(2^n)$ subsets (one copy of `path` per call).  
 
-    Since $\sum_{i=0}^n=\frac{n\times(n+1)}{2}$ and the constructor `public ArrayList(Collection<? extends E> c)` has a time complexity of $O(n)$, the overall time complexity is $O(n\times2^n)$ 
+    The constructor `public ArrayList(Collection<? extends E> c)` copies the current subset in $O(n)$ time, so the overall time complexity is $O(n\times2^n)$. 
 
 * Space Complexity: $O(n\times2^n)$
     * Recursive Stack

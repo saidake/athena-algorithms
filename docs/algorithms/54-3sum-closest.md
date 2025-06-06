@@ -98,12 +98,12 @@ class Solution:
 
   Thus, the overall time complexity is $O(n^2)$.
 
-* Space Complexity: $O(n\log n)$ in Java, $O(n)$ in Python
+* Space Complexity: $O(\log n)$ in Java, $O(n)$ in Python
     * Java implementation
       
-      `Arrays.sort()` uses $O(n \log n)$ space for primitive types due to the recursive nature of TimSort.
+      `Arrays.sort()` uses Dual-Pivot Quicksort for primitive types, so the extra space is the recursion stack $O(\log n)$.
     * Python implementation
       
-      `list.sort()` uses a non-recursive algorithm and requires linear space $O(n)$ for temporary storage.
+      `list.sort()` uses Timsort and requires linear space $O(n)$ for temporary storage.
 #### Consideration
 * All relevant combinations should be carefully considered by iterating through `nums`.

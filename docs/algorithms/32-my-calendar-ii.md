@@ -426,11 +426,12 @@ class MyCalendarTwo:
 
     The overall time complexity for `n` bookings is $O(n\log n)$ (Base Case) or $O(n^2)$ (Worst Case).
 
-* Space Complexity: $O(\log n)$ (Best Case) or $O(n)$ (Worst Case)
+* Space Complexity: $O(n)$
 
-    The stack depth depends on the segment tree's depth, requiring $(\log n)$ in the base case for a balanced tree, and $(n)$ space in the worst case when the tree degenerates into a linked list.
+    Each successful `book` allocates `SegmentTree` nodes, so after $n$ bookings the tree stores $O(n)$ nodes.  
+    The recursion stack adds $O(\log n)$ depth in the balanced case and $O(n)$ when the tree degenerates into a linked list, which does not change the $O(n)$ bound.
 
-    Thus, the overall space complexity is $O(\log n)$ (Best Case) or $O(n)$ (Worst Case).
+    Thus, the overall space complexity is $O(n)$.
 #### Java Implementation
 ```java
 class MyCalendarTwo {
@@ -541,8 +542,9 @@ class MyCalendarTwo {
 
     The overall time complexity for `n` bookings is $O(n\log n)$ (Base Case) or $O(n^2)$ (Worst Case).
 
-* Space Complexity: $O(\log n)$ (Best Case) or $O(n)$ (Worst Case)
+* Space Complexity: $O(n)$
 
-    The stack depth depends on the segment tree's depth, requiring $(\log n)$ in the base case for a balanced tree, and $(n)$ space in the worst case when the tree degenerates into a linked list.
+    Each successful `book` allocates `SegmentTree` nodes, so after $n$ bookings the tree stores $O(n)$ nodes.  
+    The recursion stack adds $O(\log n)$ depth in the balanced case and $O(n)$ when the tree degenerates into a linked list, which does not change the $O(n)$ bound.
 
-    Thus, the overall space complexity is $O(\log n)$ (Best Case) or $O(n)$ (Worst Case).
+    Thus, the overall space complexity is $O(n)$.

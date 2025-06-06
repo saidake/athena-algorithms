@@ -94,9 +94,9 @@ class Solution {
         While the inner while loop might seem to potentially iterate multiple times, its amortized time complexity is $O(1)$. This is because each element is only removed from the window once.
     * Traverse remaining integers
 
-        This loop only traverses the remaining integers after the sliding window reaches the end of the nums array, with a time complexity of $O(1)$ corresponding to the size of the sliding window.
+        After the sliding window reaches the end of `nums`, this loop may still walk the remaining window, which can take $O(n)$ time in the worst case.
 
-    Therefore, the overall time complexity of the algorithm is $O(n)$
+    Therefore, the overall time complexity of the algorithm is $O(n)$.
 * Space Complexity: $O(n)$
     * valCount Array
     

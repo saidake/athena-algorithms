@@ -69,7 +69,7 @@ class Solution {
 }
 ```
 #### Complexity Analysis
-* Time Complexity: $O(n^2)$
+* Time Complexity: $O(n)$
     * Map the elements in the `nums` array to the indices of the frequency array `freq`.
         
         Traversing the `nums` array takes $O(n)$ time.
@@ -77,16 +77,17 @@ class Solution {
     
         Since `freq` has a fixed size of `201` regardless of the input parameter, this step runs in $O(1)$ time.
     * Sort the `arr` array with insertion sort.
-        The outer loop iterates over `arr`, runing `len-1` time.  
-        The inner loop traverses elements from `i` down to `0`.  
+
+        Because $-100 \le nums[i] \le 100$, `len` is at most $201$.  
+        The outer loop iterates `len-1` times, and the inner loop traverses elements from `i` down to `0`.  
         The total time complexity is:
-        $$\sum_{i=0}^{n} i=\frac{n\times(n+1)}{2}$$ 
-        Thus, the time complexity of this step is $O(n^2)$.
+        $$\sum_{i=0}^{len} i=\frac{len\times(len+1)}{2}=O(1)$$ 
+        Thus, the time complexity of this step is $O(1)$.
     * Repeat elements in the `arr` according to their frequency.
         
         The number of elements to traverse in this step is equal to the size of `nums`, giving a time complexity of $O(n)$.
 
-    Therefore, the overall time complexity is $O(n^2)$.
+    Therefore, the overall time complexity is $O(n)$.
 * Space Complexity: $O(n)$
     * The `freq` array has a fixed size, resulting in constant space complexity $O(1)$.
     * The `arr` array has the same size as `num`, leading to space complexity $O(n)$.

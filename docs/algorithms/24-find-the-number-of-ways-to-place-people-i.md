@@ -40,12 +40,13 @@ class Solution {
         The loop iterate over all remaining elements in the worst case, with a total execution time of $\sum_{j=1}^n j = \frac{n^2+n}{2}$, resulting a time complexity of $O(n^2)$.
     
     Thus, the overall time time complexity is $O(n^2)$
-* Space Complexity: $O(logn)$
+* Space Complexity: $O(n)$
   
-  `Arrays.sort` typically requires $O(logn)$ space for sorting a primitive array.
-    
-    The total time complexity is $O(logn)$.
+  `Arrays.sort(points, comparator)` sorts an `int[][]`, which is an object array.  
+  Java TimSort requires $O(n)$ workspace for object arrays, not the $O(\log n)$ stack used by Dual-Pivot Quicksort on primitive arrays.
+
+    The total space complexity is $O(n)$.
 
 Note that the space complexity of `Arrays.sort` is:
-* $O(logn)$ for sorting primitive arrays.
+* $O(\log n)$ for sorting primitive arrays.
 * $O(n)$ for sorting object arrays.

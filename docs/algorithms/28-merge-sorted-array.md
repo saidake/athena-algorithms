@@ -31,7 +31,7 @@ class Solution {
 #### Complexity Analysis
 * Time Complexity: $O(m + n)$
 
-    The `Arrays.copyOf` method takes $O(m)$ time and the `for` loop takes $O(n)$ time, 
+    The `Arrays.copyOf` method takes $O(m)$ time and the `for` loop iterates `nums1.length = m + n` times, 
     resulting in an overall time complexity of $O(m + n)$.
 
 * Space Complexity: $O(m)$

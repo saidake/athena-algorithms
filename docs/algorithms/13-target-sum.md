@@ -116,14 +116,15 @@ public class Solution {
 }
 ```
 #### Complexity Analysis
-* Time Complexity: $O(2^n)$  
+* Time Complexity: $O(n \times neg)$  
     
-    The worst-case time complexity remains the same, but it is faster than the original solution in general cases.
+    Each state is identified by `(index, neg)`. There are $O(n)$ choices for `index` and $O(neg)$ choices for the remaining negative sum, so at most $O(n \times neg)$ distinct states.  
+    Memoization ensures each state is computed once, so the time complexity is $O(n \times neg)$ rather than $O(2^n)$.
 * Space Complexity: $O(n \times neg)$ 
     * Recursive call stack takes $O(n)$ space.
     * For the memoization map, the key takes `n` possible values (`0` to `n-1`).
      the value can range from `0` to the value of `neg`, which is `(sum-target)-2`.  
-     Hence, the map `memo` takes a time complexity $O(n \times neg)$.
+     Hence, the map `memo` takes $O(n \times neg)$ space.
 
 ### Dynamic Programming Solution
 Define a two-dimensional array `dp`, where `dp[i][j]` represents the number of **solutions** 

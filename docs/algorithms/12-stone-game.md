@@ -42,7 +42,8 @@ class Solution {
 #### Complexity Analysis
 * Time Complexity: $O(2^n)$
 
-    Alice and Bob can make two possible choices at each step, and the total number of choices is `right-left`,
+    The recursion only branches when `piles[left] == piles[right]`; otherwise it follows a single path.  
+    In the worst case, many piles are equal, so each step has two choices and the recursion tree has size $O(2^n)$, where $n$ is `right-left`.
     Therefore, the overall time complexity is $O(2^n)$.
     
 * Space Complexity: $O(n)$ 

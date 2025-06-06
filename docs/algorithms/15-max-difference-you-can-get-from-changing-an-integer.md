@@ -36,5 +36,5 @@ class Solution {
 #### Complexity Analysis
 * Time Complexity: $O(n)$
 
-    Since the `replace` method has a time complexity of $O(n)$ and is executed at most twice, while `charAt` and `Integer.parseInt` take $O(1)$ time, the overall time complexity of the `for` is $O(n)$.
+    Since the `replace` method has a time complexity of $O(n)$ and is executed at most twice, `charAt` takes $O(1)$ time, and `Integer.parseInt` takes $O(n)$ time in the length of the digit string, the overall time complexity of the `for` is $O(n)$.
 * Space Complexity: $O(1)$

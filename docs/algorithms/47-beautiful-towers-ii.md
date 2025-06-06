@@ -89,7 +89,7 @@ class Solution {
   
     Similiar to the previous step, this step also has a time complexity of $O(n)$.
 
-  Therefore, the overall time complexity is $O(n^2)$.
+  Therefore, the overall time complexity is $O(n)$.
 * Space Complexity: $O(n)$
   * `arr` and `sum1List` each use $O(n)$ space, where `n` is the length of `maxHeights`.
   * `stack` takes $O(n)$ space in the worst case when all values increase from either the beginning or the end.

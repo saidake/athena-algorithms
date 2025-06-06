@@ -20,8 +20,10 @@ class Solution {
 }
 ```
 #### Complexity Analysis
-* Time Complexity: $O(n^2)$
+* Time Complexity: $O(n^2 \cdot L)$
 
-  The number of iterations of the main loop is $\sum_{i=0}^{i=n}i=\frac{n\times(n+1)}{2}$, resulting in a time complexity of $O(n^2)$.
+  The number of iterations of the main loop is $\sum_{i=0}^{i=n}i=\frac{n\times(n+1)}{2}$, so there are $O(n^2)$ pairs.  
+  For each pair, `startsWith` and `endsWith` each take $O(L)$ time, where $L$ is the maximum string length.  
+  Therefore, the overall time complexity is $O(n^2 \cdot L)$.
 
 * Space Complexity: $O(1)$
