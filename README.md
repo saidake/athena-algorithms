@@ -108,3 +108,7 @@ These algorithm solutions are licensed under CC-BY-SA 4.0.
 - SQL Problems
     - [1. Odd and Even Transactions](docs/algorithms/1-odd-and-even-transactions.md) [MySQL, Oracle]
     - [2. Find Customer Referee](docs/algorithms/2-find-customer-referee.md) [MySQL, Oracle]
+
+# Contributing
+
+If you would like to contribute to the code base or fix an issue, please see [CONTRIBUTING.md](CONTRIBUTING.md).
